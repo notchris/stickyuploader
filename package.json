@@ -1,0 +1,32 @@
+{
+  "name": "itsosticky",
+  "version": "1.0.0",
+  "description": "A screenshot tool for itsosticky",
+  "author": "notchris",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "build": {
+    "asar": true
+  },
+  "repository": "",
+  "keywords": [],
+  "author": "notchris",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^4.1.3"
+  },
+  "dependencies": {
+    "chrome-launcher": "^0.10.5",
+    "clipboardy": "^1.2.3",
+    "desktop-screenshot": "^0.1.1",
+    "electron-store": "^3.0.0",
+    "image-clipper": "^0.4.4",
+    "jimp": "^0.6.1",
+    "konva": "^3.2.3",
+    "puppeteer": "^1.14.0",
+    "request": "^2.88.0",
+    "util": "^0.11.1"
+  }
+}

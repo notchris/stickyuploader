@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>itsosticky | Settings</title>
+    <style>
+      ::selection {
+        background:rgba(255, 255, 125, 0.99);
+        color:#032764;
+      }
+      html,body,#app,#settings {
+        width:100%;
+        height:100%;
+      }
+      body, #app {
+        background:#000;
+        background-color:#000;
+      }
+    </style>
+    <link rel="stylesheet" href="vendor/bootstrap.min.css">
+  </head>
+  <body>
+    <div id="app">
+      <div id="settings">
+        <div class="w-100 bg-dark p-3">
+          <h2 class="m-0 p-0"><span class="text-light">itsosticky</span><span class="px-3">|</span><span class="text-muted">Settings</span></h2>
+        </div>
+        <div class="container-fluid mt-3">
+
+            <div class="card text-white bg-dark mb-3">
+              <div class="card-header">
+                Account
+              </div>
+              <div class="card-body">
+                <form name="account" action="" @submit.prevent="update($event)">
+                  <div class="form-group row">
+                    <label class="col-sm-2 col-form-label">Email</label>
+                    <div class="col-sm-10">
+                      <input type="email" v-model="userEmail" class="form-control" id="inputEmail" placeholder="Email" required>
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label class="col-sm-2 col-form-label">Password</label>
+                    <div class="col-sm-10">
+                      <input type="password" v-model="userPass" class="form-control" id="inputPassword" placeholder="Password" required>
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <div class="col-sm-12">
+                      <input v-if="!updated" type="submit" value="Update" class="btn btn-primary">
+                      <button v-else class="btn btn-success" disabled>Updated!</button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div class="w-100 py-2 text-center text-muted small">
+              An app by <a target="_blank" href="https://github.com/notchris">notchris</a> for #web-social.
+            </div>
+
+        </div>
+      </div>
+    </div>
+    <script src="vendor/vue.js"></script>
+    <script>
+      require('./renderer-settings.js')
+    </script>
+  </body>
+</html>
